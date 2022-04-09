@@ -1,3 +1,4 @@
+![example workflow](https://github.com/github/docs/actions/workflows/python-app.yml/badge.svg)
 # Nested objects deep comparison
 
 This script contains a single function aiming to compare deeply 2 objects.
