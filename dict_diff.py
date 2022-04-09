@@ -58,12 +58,12 @@ def diff(d1:dict, d2:dict, name1="dict1", name2="dict2") :
             if type(d1) == type(d2) :
                 if d1 != d2 :
                     # if the elements to compare are non sequential or a string
-                    if type(d1) != set :
+                    if not isinstance(d1, set) :
                         return {name1 : d1, name2 : d2}
                     # if the elements are sets
                     else :
-                        elmts_1 = set(d1) - set(d2)
-                        elmts_2 = set(d2) - set(d1)
+                        elmts_1 = d1 - d2
+                        elmts_2 = d2 - d1
 
                         for n, elmt in zip([name1, name2],  [elmts_1, elmts_2]) :
                             if len(elmt) > 0 :
