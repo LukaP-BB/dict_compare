@@ -53,9 +53,6 @@ def diff(d1:dict, d2:dict, name1="dict1", name2="dict2") :
                 if i >= len(d) :
                     diff_dict["supp_elmts"] = {name : list(other_d)[i:]}
 
-            for i, (elmt1, elmt2) in enumerate(zip(d1, d2)) :
-                if elmt1 != elmt2 :
-                    diff_dict[f"index_{i}"] = diff(elmt1, elmt2, name1=name1, name2=name2)
             return diff_dict
 
         # for comparison of sets, strings, ints, floats...  
