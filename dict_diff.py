@@ -53,14 +53,12 @@ def diff(d1:dict, d2:dict, name1="dict1", name2="dict2") :
                 if i >= len(d) :
                     diff_dict["supp_elmts"] = {name : list(other_d)[i:]}
 
-            return diff_dict
-
         # for comparison of sets, strings, ints, floats...  
         else :
             if type(d1) == type(d2) :
                 if d1 != d2 :
                     # if the elements to compare are non sequential or a string
-                    if type(d1) in [str, float, int, complex] :
+                    if type(d1) != set :
                         return {name1 : d1, name2 : d2}
                     # if the elements are sets
                     else :
