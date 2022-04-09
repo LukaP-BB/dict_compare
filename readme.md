@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/docs/actions/workflows/python-app.yml/badge.svg)
+[![dict_diff](https://github.com/LukaP-BB/dict_compare/actions/workflows/python-app.yml/badge.svg)](https://github.com/LukaP-BB/dict_compare/actions/workflows/python-app.yml)
 # Nested objects deep comparison
 
 This script contains a single function aiming to compare deeply 2 objects.
