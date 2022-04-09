@@ -1,6 +1,3 @@
-from pprint import pprint
-
-
 def diff(d1:dict, d2:dict, name1="dict1", name2="dict2") :
     """
     Compare deeply 2 objects and returns a dictionnary of the differences between them.
@@ -80,53 +77,3 @@ def diff(d1:dict, d2:dict, name1="dict1", name2="dict2") :
                 diff_dict = {name1 : d1, name2 : d2}
 
         return diff_dict
-
-def test() :
-    l1 = [
-        ("a", "b", "c", "d"),
-        ("a", "b", "d"),
-        ("a", "b", "e")
-    ]
-
-    l2 = [
-        ("a", "b", "d"),
-        ("a", "b", "a"),
-        ("a", "b", "e", "f"),
-        ["bla"]
-    ]
-
-    d1 = {
-        "a": "b",
-        "c": 10,
-        "f": {
-            "g": "h",
-            "i": "j",
-            "k": {
-                "l", "m", "n", "o"
-            },
-            "set" : l1
-        },
-    }
-
-    d2 = {
-        "a": "b",
-        "c": 5,
-        "f": {
-            "g": "h",
-            "i": {"bla", "foo"},
-            "k": {
-                "l", "m", "n"
-            },
-            "set" : l2,
-            "h" : {"bla", "ka", 'to'}   
-        },
-    }
-
-    return diff(d1, d2)
-
-if __name__ == "__main__" :
-    pprint(test())
-    # s1 = ["a", "b", "c"]
-    # s2 = ["c", "d", "e"]
-
-    # print(s2-s1)

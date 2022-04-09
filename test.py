@@ -12,22 +12,17 @@ def test_function() :
                               'supp_elmts': {'dict1': [['bla']]}}}}
 
     l1 = [("a", "b", "c", "d"),("a", "b", "d"),("a", "b", "e")]
-
     l2 = [("a", "b", "d"),("a", "b", "a"),("a", "b", "e", "f"),["bla"]]
 
     d1 = {"a": "b","c": 10,
         "f": {"g": "h","i": "j",
             "k": {"l", "m", "n", "o"},
-            "set": l1
-        },
-    }
+            "set": l1},}
 
     d2 = {"a": "b","c": 5,"f": {"g": "h",
             "i": {"bla", "foo"},
             "k": {"l", "m", "n"},
             "set": l2,
-            "h": {"bla", "ka", 'to'}
-        },
-    }
+            "h": {"bla", "ka", 'to'}},}
 
     assert diff(d1, d2) == ref_diff
